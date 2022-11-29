@@ -67,7 +67,7 @@ class _OTPScreenState extends State<OTPScreen> {
               child: ElevatedButton(onPressed: () {
                 OtpController.instance.verifyOTP(otp);
                 Get.to(()=> const HomeScreen());
-              }, child: const Text("VERIFY")),
+              }, child: const Text("AUTHENTICATE")),
             ),
             const SizedBox(height: 20.0,),
             SizedBox(
@@ -78,7 +78,7 @@ class _OTPScreenState extends State<OTPScreen> {
                   //SignupController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
                   SignupController.instance.phoneAuthentication(controllers.phoneNo.text.trim());
               },
-              text: Text('Resend OTP'),
+              text: Text('RESEND OTP'),
               duration: 5,
             ),
             ),
